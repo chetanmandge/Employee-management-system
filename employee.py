@@ -1,5 +1,5 @@
 
-
+employee_DB=[['chetan',101,'IT','Pune']]
 def menu():
     print("="*50)
     print("welcome to employee management system")
@@ -14,7 +14,20 @@ def menu():
     print("="*50)
 
 def add_employee():
-    pass
+    employee=[]
+    E_name=input('Enter employee Name :-')
+    E_id=input('Enter employee ID :-')
+    E_dept=input('Enter employee Dept :-')
+    E_location=input('enter employee location :-')
+
+    employee[0]=E_name
+    employee[1]=E_id
+    employee[2]=E_dept
+    employee[3]=E_location
+
+    employee_DB.append(employee)
+    print(f"employee {E_name} is successfully added in DB a",employee_DB)
+
 
 def update():
     pass
