@@ -20,23 +20,34 @@ def add_employee():
     E_dept=input('Enter employee Dept :-')
     E_location=input('enter employee location :-')
 
-    employee[0]=E_name
-    employee[1]=E_id
-    employee[2]=E_dept
-    employee[3]=E_location
+    employee.append(E_name)
+    employee.append(E_id)
+    employee.append(E_dept)
+    employee.append(E_location)
+
 
     employee_DB.append(employee)
-    print(f"employee {E_name} is successfully added in DB a",employee_DB)
-
+    print(f"employee {E_name} is successfully added in DB ")
+    print(employee_DB)
 
 def update():
+
     pass
 
 def remove():
-    pass
+    get_ip=input("enter employee name you want to remove:-")
+    if(get_ip in employee_DB):
+        del employee_DB[get_ip]
 
 def show_all():
-    pass
+    for x in employee_DB:
+        print("name:-",x[0])
+        print("ID:-", x[1])
+        print("Dept:-", x[2])
+        print("Location:-", x[3])
+        print("="*20)
+
+
 
 while True:
     menu()
